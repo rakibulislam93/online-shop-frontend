@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../input.css">
+
+    <!-- fontawsome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font family  -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body style="background-color: #f5f5f5;">
+<header>
+        <!-- navbar  -->
+      <div id="navbar-placeholder">
+      <!-- navbar load here from navbar.html  -->
+      </div>
+
+    <section id="product_image" class="container bg-white  py-28 shadow-lg flex justify-center mx-auto px-4 pt-[130px]">
+
+        <!-- load image here  -->
+
+    </section>
+
+</header>
+
+<main>
+    
+    <section class="container bg-white shadow-lg mx-auto py-5">
+
+        <div class=" p-5 flex flex-wrap gap-5 justify-between">
+            
+            <div id="prdouct_img" class="flex-1">
+                <!-- load image here  -->
+            </div>
+        
+            <div id="product_info" class="flex-1 space-y-3">
+                <!-- load product information  -->
+            </div>
+            <!-- delivery information  -->
+            <div class="flex-1 bg-slate-50 shadow-md p-5">
+                <div class="space-y-2">
+                  <small class="text-gray-400">Delivery Options</small>
+                  <h4 class="text-gray-700"><i class="fa-solid fa-location-dot text-gray-500"></i> Dhaka, Dhaka North, Banani</h4>
+                  <p class="text-gray-400 pl-4">Road No. 12 - 19</p>
+                  <h4 class="text-gray-700"><i class="fa-solid fa-truck text-gray-500"></i> Standard Delivery  0.8$</h4>
+                  <small class="text-gray-600 pl-4">Guaranteed by 27-30 Apr</small>
+                  <h4 class="text-gray-700"><i class="fa-solid fa-dollar-sign text-gray-500"></i> Cash on Delivery Available</h4>
+
+                  <hr class="py-2">
+
+                </div>
+                
+                <div>
+                  <small class="text-gray-400">Return & Warranty </small>
+                  <h5 class="text-gray-700 pl-4">7 Days Returns</h5>
+                  <h5 class="text-gray-700 pl-4">Warranty not available</h5>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- product extra information div  -->
+        <div id="product_extra_info" class="py-20 px-5 text-gray-600 space-y-2" style="display: none;">
+          
+        </div>
+
+    </section>
+
+    <!-- Review section  -->
+    <section class="container shadow-lg mx-auto mt-5 bg-white p-5">
+      <div id="product_reviews">
+        <hr>
+        <div class="flex justify-between">
+          <h1 class="font-poppins text-2xl text-gray-700 py-2">Product Reviews</h1>
+          <h1 id="count_reviews" class="font-poppins text-base text-gray-700 py-2" ></h1>
+        </div>
+        <hr>
+
+        <!-- create a div use js and load review  -->
+
+      </div>
+    </section>
+
+</main>
+
+<footer id="footer">
+
+</footer>
+
+    <script src="/src/assests/js/navbar.js"></script>
+    <script src="../assests/js/product.js"></script>
+    <script src="/src/components/footer.js"></script>
+    
+</body>
+</html>

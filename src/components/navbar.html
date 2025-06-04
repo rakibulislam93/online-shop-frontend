@@ -1,0 +1,54 @@
+
+
+<nav id="navbar" class="bg-slate-300 fixed left-0 top-0 z-50 w-full">
+  <div class="flex justify-evenly items-center px-3 py-5 gap-2">
+
+    <!-- Logo -->
+    <div>
+      <a href="/index.html">
+        <img class="w-24 sm:w-32 rounded-xl shadow-lg" src="/src/assests/images/ecom_logo.png" alt="">
+      </a>
+    </div>
+
+    <!-- Search -->
+    <div class="flex gap-0">
+      <input id="searchField" class="w-[200px] sm:w-[400px] md:w-[500px] p-3 outline-none" type="text" placeholder="Search in Kinakata.com">
+      <button type="button" onclick="handleSearchField()" class="bg-orange-300 px-4">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <!-- Right Side -->
+    <div class="flex items-center gap-2 sm:gap-5">
+      <a href="/src/pages/show_order_cart.html" class="relative">
+        <i class="fa-solid fa-cart-arrow-down text-2xl w-7"></i>
+        <span id="cart_item_value" class="absolute -top-2  right-0 bg-red-600 rounded-full text-xs px-1 text-white"> 0 </span>
+      </a>
+
+      <!-- Login/Register Section -->
+      <div class="login-register-section">
+        <a href="/src/pages/login.html" class="text-sm sm:text-base font-poppins hover:bg-gray-400 px-2 py-1 rounded transition">Login</a> | 
+        <a href="/src/pages/register.html" class="text-sm sm:text-base font-poppins hover:bg-gray-400 px-2 py-1 rounded transition">Register</a>
+      </div>
+
+      <!-- Profile Dropdown (Initially hidden) -->
+      <div id="profile_section" class="relative  profile-dropdown group hidden">
+        <img onclick="toggleDropdown()" src="/src/assests/images/ecom_logo.png" class="w-10 h-10 sm:w-14 sm:h-14 rounded-full cursor-pointer" />
+
+        <div id="dropdown" class="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-lg   z-50">
+          <ul class="text-sm text-gray-700">
+            <li><a href="/src/pages/profile.html" class="block px-4 py-2 hover:bg-gray-100">Profile</a></li>
+            <li id="dashboardLink">
+              <a href="/src/pages/dashboard.html" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
+            </li>
+            <li>
+              <a href="#" onclick="handleLogout()" class="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+

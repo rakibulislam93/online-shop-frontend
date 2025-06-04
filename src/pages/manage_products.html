@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/src/input.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font family  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="sidebar_container">
+
+    </div>
+
+    <main class="md:ml-64">
+        <div class="p-6 flex-1 overflow-auto">
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                    <div class="bg-blue-500 text-white p-3 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h1l3 9 4-18 3 14 3-6 3 9h1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Total Product</p>
+                        <p class="text-2xl font-semibold">500</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                    <div class="bg-green-500 text-white p-3 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Admin added</p>
+                        <p class="text-2xl font-semibold">300</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                    <div class="bg-yellow-400 text-white p-3 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Seller added</p>
+                        <p class="text-2xl font-semibold">200</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <section class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">All Products</h2>
+                <div class="flex justify-between">
+                    <div>
+                        <input id="product_filterField" type="text" class="p-2 bg-slate-300 rounded-md" placeholder="search by category/name">
+                        <button onclick="handleAllProducts()" class="py-2 px-4 bg-orange-300 hover:bg-orange-500 rounded-md">Search</button>
+                    </div>
+                    <a href="/src/pages/add_new_products.html">
+                        <button class="bg-blue-500 px-3 py-2 rounded-md font-semibold hover:bg-blue-600">Add Product</button>
+                    </a>
+                </div>
+                <div class="overflow-x-auto mt-3">
+                    <table class="min-w-full table-auto">
+                        <thead>
+                            <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                                <th class="py-3 px-6 text-left">Product ID</th>
+                                <th class="py-3 px-6 text-left">Category_name</th>
+                                <th class="py-3 px-6 text-left">Product Name</th>
+                                <th class="py-3 px-6 text-left">Price</th>
+                                <th class="py-3 px-6 text-left">Quantity</th>
+                                <th class="py-3 px-6 text-left">Image</th>
+                                <th class="py-3 px-6 text-left">Available</th>
+                                <th class="py-3 px-6 text-left">Product Details</th>
+                                <th class="py-3 px-6 text-left">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ProductsTableBody" class="text-gray-700">
+                            
+                            <!-- load all products  -->
+                        </tbody>
+
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer" class="md:ml-64">
+
+    </footer>
+
+
+    <script src="/src/components/sidebar.js"></script>
+    <script src="/src/assests/js/manage_products.js"></script>
+    <script src="/src/components/footer.js"></script>
+    
+
+</body>
+
+</html>

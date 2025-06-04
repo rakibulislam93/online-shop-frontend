@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Product</title>
+  <link rel="stylesheet" href="/src/input.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font family  -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="sidebar_container">
+
+  </div>
+
+  <main class="md:ml-64">
+    <form id="updateProductForm" class="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg space-y-4"
+      enctype="multipart/form-data" method="POST" onsubmit="updateProduct(event)">
+      <h2 class="text-2xl font-semibold text-center mb-4">Update Product Information</h2>
+
+      <div id="product_update_massage" class="bg-slate-300 py-3 rounded-md text-center font-semibold hidden">
+
+        
+
+      </div>
+
+      <!-- Title -->
+      <div>
+        <label for="title" class="block font-medium mb-1">Title<span class="text-red-500">*</span></label>
+        <input type="text" id="title" name="title" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+      </div>
+
+      <!-- Name -->
+      <div>
+        <label for="name" class="block font-medium mb-1">Name<span class="text-red-500">*</span></label>
+        <input type="text" id="name" name="name" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+      </div>
+
+      <!-- Description -->
+      <div>
+        <label for="description" class="block font-medium mb-1">Description<span class="text-red-500">*</span></label>
+        <textarea id="description" name="description" required rows="3"
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+      </div>
+
+      <!-- Image -->
+      <div>
+        <label for="image" class="block font-medium mb-1">Image<span class="text-red-500">*</span></label>
+        <input type="file" id="image" name="image" accept="image/*"
+            
+          class="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg cursor-pointer bg-white focus:outline-none">
+        
+        <p>Current Image:</p>
+        <img id="existing_image" src="" alt="Old Image" style="max-width: 100px;">
+
+      </div>
+
+      <!-- Price & Discount -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="price" class="block font-medium mb-1">Price ($)<span class="text-red-500">*</span></label>
+          <input type="number" id="price" name="price" step="0.01" required
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+        </div>
+        <div>
+          <label for="discount" class="block font-medium mb-1">Discount (%)</label>
+          <input type="number" id="discount" name="discount" step="0.01" min="0" max="100"
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+        </div>
+      </div>
+
+      <!-- Quantity & Availability -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="quantity" class="block font-medium mb-1">Quantity<span class="text-red-500">*</span></label>
+          <input type="number" id="quantity" name="quantity" min="0" required
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+        </div>
+        <div>
+          <label for="is_available" class="block font-medium mb-1">Is Available?<span
+              class="text-red-500">*</span></label>
+          <select id="is_available" name="is_available" required
+            class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+            <option value="">Select</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div>
+        <label for="category_filed" class="block font-medium mb-1">Category<span class="text-red-500">*</span></label>
+        <select id="category_filed" name="category" required
+          class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+          <option value="">Select Category</option>
+          <!-- Populate categories dynamically -->
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center pt-4">
+        <button type="submit"
+          class="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Update Product</button>
+      </div>
+    </form>
+
+  </main>
+
+
+
+  <script src="/src/components/sidebar.js"></script>
+  <script src="/src/assests/js/manage_products.js"></script>
+
+
+</body>
+
+</html>

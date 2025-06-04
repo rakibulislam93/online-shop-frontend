@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users Orders</title>
+    <link rel="stylesheet" href="/src/input.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font family  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="sidebar_container">
+        <!-- load sidebar  -->
+
+    </div>
+
+    <main class="md:ml-64">
+        <div class="p-6 flex-1 overflow-auto">
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                    <div class="bg-blue-500 text-white p-3 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-yellow-500" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m-6 10a9 9 0 110-18 9 9 0 010 18zm7-10h2a2 2 0 012 2v6a2 2 0 01-2 2h-2m0-10v10" />
+                        </svg>
+
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Pending Orders</p>
+                        <p class="text-2xl font-semibold">200</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                    <div class="bg-green-500 text-white p-3 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Total Orders</p>
+                        <p class="text-2xl font-semibold">520</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow flex items-center space-x-4">
+                    <div class="bg-yellow-400 text-white p-3 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-gray-500">Complete Delivery</p>
+                        <p class="text-2xl font-semibold">100</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders Table -->
+            <section class="bg-white p-6 rounded-lg shadow">
+                <h2 class="text-xl font-semibold mb-4">Recent Orders</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <thead>
+                            <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                                <th class="py-3 px-6 text-left">Order ID</th>
+                                <th class="py-3 px-6 text-left">Customer</th>
+                                <th class="py-3 px-6 text-left">Total Price</th>
+                                <th class="py-3 px-6 text-left">Date</th>
+                                <th class="py-3 px-6 text-left">Status</th>
+                                <th class="py-3 px-6 text-left">Paid</th>
+                                <th class="py-3 px-6 text-left">Product Name</th>
+                                <th class="py-3 px-6 text-left">Product Quantity</th>
+                                <th class="py-3 px-6 text-left">Product Price</th>
+                                <th class="py-3 px-6 text-left">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTableBody" class="text-gray-700">
+                            
+                            <!-- load all orders  -->
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer" class="md:ml-64">
+
+    </footer>
+
+    <script src="/src/components/sidebar.js"></script>
+    
+    <script src="/src/assests/js/all_orders.js"></script>
+    <script src="/src/components/footer.js"></script>
+
+</body>
+
+</html>

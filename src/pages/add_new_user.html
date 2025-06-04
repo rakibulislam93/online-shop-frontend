@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link rel="stylesheet" href="/src/input.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font family  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- sidebar  -->
+    <div id="sidebar_container">
+        <!-- load sidebar here  -->
+    </div>
+
+<main class="md:ml-64">
+    <div class=" flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">New User Information Form</h2>
+            <div id="new_user_error" class="bg-red-200 p-3 rounded-md hidden">
+                
+            </div>
+            <form id="add_new_user" method="POST" onsubmit="handleAddNewUser(event)">
+                <!-- username  -->
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="username" name="username" 
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+                <!-- Email  -->
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" placeholder="test@gamil.com"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+                <!-- Password  -->
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="text" id="password" name="password"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required>
+                </div>
+                <!-- User is active  -->
+                <div class="mb-4">
+                    <label for="is_active" class="block text-sm font-medium text-gray-700">Is Active</label>
+                    <input type="checkbox" id="is_active" name="is_active" checked
+                        class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                </div>
+                <!-- User role  -->
+                <div class="mb-4">
+                    <label for="user_role" class="block text-sm font-medium text-gray-700">User Role</label>
+                    <select id="user_role" name="user_role"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="admin" selected>Admin</option>
+                        <option value="customer">Customer</option>
+                        <option value="seller">Seller</option>
+                    </select>
+                </div>
+                <!-- Approval status  -->
+                <div class="mb-4">
+                    <label for="approval_status" class="block text-sm font-medium text-gray-700">Approval Status</label>
+                    <select id="approval_status" name="approval_status"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="pending" selected>Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                <!-- Is staff filed  -->
+                <div class="mb-4">
+                    <label for="is_staff" class="block text-sm font-medium text-gray-700">Is Staff</label>
+                    <input type="checkbox" id="is_staff" name="is_staff"
+                        class="mt-1 h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                </div>
+
+                <div class="text-center">
+                    <button type="submit"
+                        class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add New User</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer id="footer" class="md:ml-64">
+
+</footer>
+
+    <script src="/src/components/sidebar.js"></script>
+    <script src="/src/assests/js/all_user.js"></script>
+    <script src="/src/components/footer.js"></script>
+
+</body>
+
+</html>

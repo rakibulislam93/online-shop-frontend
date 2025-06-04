@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../input.css">
+
+    <!-- fontawsome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body style="background-color: #f5f5f5;">
+    
+    
+    
+    <div class="min-h-screen bg-gray-100 flex justify-center items-center px-4">
+        <div class="bg-white p-8 w-full rounded-lg shadow-xl max-w-md">
+            
+            <form id="registerForm" onsubmit="handleRegister(event)" method="POST" class="space-y-5">
+                
+                <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Register</h2>
+
+                <div id="register_error" class="hidden text-red-600 text-center bg-red-100 p-2">
+                    <!-- register errors -->
+
+                </div>
+
+                <!-- username field  -->
+                <div class="relative">
+                    <i class="fa fa-user absolute top-1/2 left-3 text-gray-400 transform -translate-y-1/2"></i>
+                    <input type="text" id="username" name="username" placeholder="Username" class="w-full pl-10 pr-10 py-2 border border-gray-300" required >
+                </div>
+
+                <!-- email field  -->
+                <div class="relative">
+                    <!-- <i class="fa fa-user "></i> -->
+                    <i class="fa-solid fa-envelope absolute top-1/2 left-3 text-gray-400 transform -translate-y-1/2"></i>
+                    <input type="email" id="email" name="email" placeholder="Email" class="w-full pl-10 pr-10 py-2 border border-gray-300" required>
+                </div>
+
+                <!-- password field  -->
+
+                <div class="relative">
+                    <i class="fa fa-lock absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"></i>
+
+                    <input id="password" type="password" name="password" placeholder="Password"
+                           class="w-full pl-10 pr-4 py-2 border border-gray-300 " required>
+                </div>
+
+                <!-- confirm password  -->
+                <div class="relative">
+                    <i class="fa fa-lock absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400"></i>
+
+                    <input id="confirm_password" type="password" name="confirm_password" placeholder="Confirm Password"
+                           class="w-full pl-10 pr-4 py-2 border border-gray-300 " required>
+                </div>
+
+                <div class="relative">
+                    <input type="text" placeholder="User role" class="w-full  pr-4 pl-2 py-2 border border-gray-300 ">
+                    <select name="" id="user_role" class="absolute right-4 top-1/2 transform -translate-y-4 p-1">
+
+                        <option value="customer">Default</option>
+                        <option value="admin">Admin</option>
+                        <option value="seller">Seller</option>
+                        <option value="customer">Customer</option>
+
+                    </select>
+                </div>
+
+                <!-- Register button  -->
+
+                <div>
+                    <button type="submit"
+                            class="w-full flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
+                      <i class="fa fa-sign-in-alt"></i> Register
+                    </button>
+
+                    <div id="register_loading" class="text-center text-blue-600 font-semibold mt-2 hidden">
+    
+                        <i class="fas fa-spinner fa-spin mr-2"></i> Loading...
+                    </div>
+                    <p class="text-center mt-2 font-semibold">Already have an account.?<a href="../pages/login.html" class="text-blue-700"> Login</a></p>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+    
+    <script src="/src/assests/js/auth.js"></script>
+
+</body>
+</html>
