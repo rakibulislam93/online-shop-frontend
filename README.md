@@ -3,7 +3,7 @@
 Kinakata.com is a modern and responsive eCommerce web application frontend built using **HTML**, **Tailwind CSS**, and **Vanilla JavaScript**. It connects with a **Django REST Framework (DRF)** backend to deliver dynamic product data and manage customer interactions like cart, checkout, and more.
 
 > 🔗 **Live Site:** [https://kinakata.com](https://kinakata.com)  
-> 📁 **GitHub Repo:** [github.com/rakibulislam93/online-shop-frontend](https://github.com/rakibulislam93/online-shop-frontend)
+> 📁 **GitHub Repo:** [github.com/rakibulislam93/online-shop-frontend](https://github.com/rakibulislam93/online-shop-frontend)  
 > 📁 **Backend Repo:** [github.com/rakibulislam93/online-shop-backend](https://github.com/rakibulislam93/online-shop-backend)
 
 ---
