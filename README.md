@@ -35,3 +35,9 @@ Kinakata.com is a modern and responsive eCommerce web application frontend built
 ```bash
 git clone https://github.com/rakibulislam93/online-shop-frontend.git
 cd online-shop-frontend
+```
+---
+### 👤 Author
+
+**Rakibul Islam**  
+🔗 [GitHub](https://github.com/rakibulislam93) 
