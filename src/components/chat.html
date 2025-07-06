@@ -1,0 +1,55 @@
+<!-- Chatbot Component -->
+<div id="chatbot" class="fixed bottom-4 right-4 z-50 font-sans">
+  <!-- Toggle Button -->
+  <button
+    id="chatbot-toggle"
+    class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-3 rounded-full shadow-xl hover:scale-105 transition"
+  >
+    💬
+  </button>
+
+  <!-- Chatbox -->
+  <div
+    id="chatbox"
+    class="hidden mt-3 w-80 max-w-full h-[400px] bg-white border border-blue-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden"
+  >
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 px-4 py-3 text-white flex justify-between items-center">
+      <h2 class="text-lg font-semibold">🤖 Live Chat</h2>
+      <button id="chatbot-close" class="text-white hover:text-red-300 text-xl">✖</button>
+    </div>
+
+    <!-- Messages Area -->
+    <div
+      id="chat-messages"
+      class="flex-1 px-3 py-2 overflow-y-auto bg-gray-50 space-y-3 text-sm scroll-smooth"
+    >
+      <div class="bg-blue-100 text-blue-800 p-2 rounded-lg w-fit max-w-[80%]">🤖 Hello! How can I help You?</div>
+    </div>
+
+    <!-- Input Area with Send Button -->
+     <form id="chat-form" class="p-3 border-t bg-white flex items-end gap-2">
+  <!-- Textarea -->
+  <div class="relative flex-grow">
+    <textarea
+      id="chat-input"
+      rows="1"
+      placeholder="message..."
+      autocomplete="off"
+      class="peer w-full resize-none overflow-hidden bg-gray-100 border border-gray-300 rounded-xl px-4 py-2.5 pr-12 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white transition"
+      
+    ></textarea>
+  </div>
+
+  <!-- Send Button -->
+  <button
+    type="submit"
+    class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-2.5 rounded-xl shadow-md transition-all duration-200 active:scale-95"
+    aria-label="Send message"
+  >
+    Send
+  </button>
+</form>
+    
+  </div>
+</div>

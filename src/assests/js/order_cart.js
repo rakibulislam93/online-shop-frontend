@@ -98,6 +98,9 @@ const handleCheckOut=()=>{
             }
         })
     }
+    else{
+        alert('You are not logged in.!')
+    }
 }
 
 
