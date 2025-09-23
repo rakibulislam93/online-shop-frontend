@@ -57,3 +57,6 @@ const showCart=()=>{
 showCart()
 window.addEventListener("pageshow",showCart)
 loadNavbar()
+
+
+window.toggleDropdown = toggleDropdown
