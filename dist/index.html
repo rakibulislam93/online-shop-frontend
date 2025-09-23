@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- fontawsome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font family  -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Include Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <script type="module" crossorigin src="/assets/index-BrKcikmS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CrLRAlS5.css">
+</head>
+<body style="background-color: #f5f5f5;">
+
+  <header>
+    <!-- navbar  -->
+    <div id="navbar-placeholder">
+      <!-- navbar load here from navbar.html  -->
+    </div>
+
+    
+    <!-- Carousel HTML -->
+    <div class="container mx-auto  px-4 mt-20 lg:mt-[125px]">
+      <div class="swiper mySwiper  overflow-hidden shadow-lg">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/slider_01-C4lfOhGY.jpg" alt="Product 1" class="w-full h-[450px] object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/slider_02-CDkCNNxf.jpg" alt="Product 2" class="w-full h-[450px] object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/slider_03-DH8Y0tJK.jpg" alt="Product 3" class="w-full h-[450px] object-cover" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/slider_04-F1VBHjjv.png" alt="Product 4" class="w-full h-[450px] object-cover" />
+          </div>
+        </div>
+    
+        <!-- Pagination & Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev text-white"></div>
+        <div class="swiper-button-next text-white"></div>
+      </div>
+    </div>
+
+
+    <!-- categories -->
+
+    <section id="category_container" class="container mx-auto px-4">
+
+      <h2 class="font-poppins  py-5 text-xl text-gray-500">Categories</h2>
+
+      <div id="all_category" class="flex gap-5 sm:gap-10 flex-wrap justify-center sm:justify-start  bg-white shadow-lg rounded-md p-5">
+
+       
+        <!-- all category load here  -->
+
+        <div id="cat_loader" class="w-full  flex justify-center items-center min-h-44">
+          <div class="flex space-x-2">
+            <div class="w-4 h-4 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+            <div class="w-4 h-4 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+            <div class="w-4 h-4 bg-blue-600 rounded-full animate-bounce"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    
+  </header>
+
+  <main>
+    <!-- products section  -->
+     <section class="container mx-auto px-4 mt-10">
+      <h1 class="font-poppins text-xl text-gray-500 mb-5 text-center md:text-start">Features Product</h1>
+
+      <div id="product_container" class=" flex flex-wrap justify-center gap-1 sm:flex sm:justify-start bg-white shadow-lg rounded-md p-5">
+        
+        <div id="product_loader" class="w-full  flex justify-center items-center min-h-44">
+          <div class="flex space-x-2">
+            <div class="w-4 h-4 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+            <div class="w-4 h-4 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+            <div class="w-4 h-4 bg-blue-600 rounded-full animate-bounce"></div>
+          </div>
+
+        </div>
+
+        <!-- all product load here  -->
+
+      </div>
+     </section>
+
+     <!-- AI Live chatbot  -->
+     <div id="chatbot_container">
+
+     </div>
+
+  </main>
+
+  
+
+<footer id="footer">
+
+</footer>
+
+  
+
+
+  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<script  src="/src/assests/js/navbar.js"></script>
+
+</body>
+</html>
