@@ -60,7 +60,7 @@ const loadChatbot = () => {
           });
 
           const data = await response.json();
-          botMsgEl.innerHTML = createBubble("bot", `🤖 ${data.response || "No response found"}`);
+          botMsgEl.innerHTML = createBubble("bot", `🤖 ${data.response || "No response found or server error"}`);
         } catch (err) {
           botMsgEl.innerHTML = createBubble("error", `❌ ${err.message}`);
         }
